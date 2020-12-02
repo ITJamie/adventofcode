@@ -61,21 +61,11 @@ puts passed
 puts ''
 def rule_checkv2(password_to_check, req_char, pos1, pos2)
   chars_raw = password_to_check.split(//)
-  chars_raw.each_with_index do |a, b|
-    # puts a + ':' + b.to_s
-  end
-#   puts ''
-#   puts req_char
 
   pos1 = pos1.to_i - 1
   pos2 = pos2.to_i - 1
-#   puts pos1
-#   puts pos2
   pos1_status = chars_raw[pos1] == req_char
   pos2_status = chars_raw[pos2] == req_char
-#   puts pos1_status
-#   puts pos2_status
-  # exit(0)
   if pos1_status
     if pos2_status
       false
