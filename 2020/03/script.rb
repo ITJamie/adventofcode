@@ -3,7 +3,7 @@
 lines = []
 File.open('input.txt').each do |line|
   i = 0
-  ii = 300
+  ii = 80
   line = line.split("\n")[0]
   new_line = line
   while i < ii
@@ -47,7 +47,7 @@ sets = [
 ]
 answers = []
 sets.each do |set|
-  trees = skiiii(set[0], set[1], lines, output = true)
+  trees = skiiii(set[0], set[1], lines, output = false)
   answers.append trees
   puts "trees hit: #{trees}"
   puts ''
