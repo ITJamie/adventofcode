@@ -72,12 +72,10 @@ def rule_checkv2(password_to_check, req_char, pos1, pos2)
     else
       true
     end
+  elsif pos2_status
+    true
   else
-    if pos2_status
-      true
-    else
-      false
-    end
+    false
   end
 end
 passed = 0
@@ -88,6 +86,5 @@ passwords.each do |index, passwordh|
   passed += 1 if valid_pass
 end
 
-puts "passed by method two"
+puts 'passed by method two'
 puts passed
-
