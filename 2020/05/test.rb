@@ -12,12 +12,11 @@ ap find_seat_ids(binarys)
 
 puts "highest_id: #{find_highest_seat(binarys)}"
 
-allseats = [119,567,820,922]
+allseats = [119, 567, 820, 922]
 used_seats = []
 binarys.each do |seat_check|
-    used_seats.append(seat_check['seatid'])
+  used_seats.append(seat_check['seatid'])
 end
 
-puts "unused seats:"
-ap allseats - used_seats 
-
+puts 'unused seats:'
+ap allseats - used_seats

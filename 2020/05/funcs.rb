@@ -35,10 +35,10 @@ def find_seat_ids(arrays)
 end
 
 def find_highest_seat(binarys)
-    resp = find_seat_ids(binarys)
-    highest_id = 0
-    resp.each do |data|
-      highest_id = data['seatid'] if data['seatid'] > highest_id
-    end
-    highest_id
+  resp = find_seat_ids(binarys)
+  highest_id = 0
+  resp.each do |data|
+    highest_id = data['seatid'] if data['seatid'] > highest_id
   end
+  highest_id
+end

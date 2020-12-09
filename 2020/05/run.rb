@@ -17,12 +17,11 @@ resp.each do |data|
 end
 puts "highest_id: #{highest_id}"
 
-
 allseats = [*1..989]
 used_seats = []
 binarys.each do |seat_check|
-    used_seats.append(seat_check['seatid'])
+  used_seats.append(seat_check['seatid'])
 end
 
-puts "unused seats:"
-ap allseats - used_seats 
+puts 'unused seats:'
+ap allseats - used_seats
