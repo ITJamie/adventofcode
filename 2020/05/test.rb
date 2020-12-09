@@ -10,13 +10,14 @@ binarys = convert_lines_to_binarys(raw)
 
 ap find_seat_ids(binarys)
 
-def find_highest_seat(binarys)
-  resp = find_seat_ids(binarys)
-  highest_id = 0
-  resp.each do |data|
-    highest_id = data['seatid'] if data['seatid'] > highest_id
-  end
-  highest_id
+puts "highest_id: #{find_highest_seat(binarys)}"
+
+allseats = [119,567,820,922]
+used_seats = []
+binarys.each do |seat_check|
+    used_seats.append(seat_check['seatid'])
 end
 
-puts "highest_id: #{find_highest_seat(binarys)}"
+puts "unused seats:"
+ap allseats - used_seats 
+
